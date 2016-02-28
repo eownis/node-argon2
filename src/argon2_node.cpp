@@ -19,9 +19,7 @@ constexpr uint32_t log(uint32_t number, uint32_t base = 2u)
 
 constexpr size_type base64Length(size_type length)
 {
-    using std::ceil;
-
-    return static_cast<size_type>(ceil(length / 3.0)) * 4;
+    return static_cast<size_type>(std::ceil(length / 3.0)) * 4;
 }
 
 size_type encodedLength(size_type saltLength)
